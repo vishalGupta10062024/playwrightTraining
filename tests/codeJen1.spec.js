@@ -5,6 +5,8 @@ test('test', async ({ page }) => {
   await page.goto('chrome-error://chromewebdata/');
   await page.goto('https://www.amazon.com/');
   await page.getByPlaceholder('Search Amazon').click();
+  await page.getByPlaceholder('Search Amazon').click();
+  await page.getByPlaceholder('Search Amazon').click();
   await page.getByPlaceholder('Search Amazon').fill('ipad');
   await page.getByLabel('ipad 10th generation', { exact: true }).click();
   await page.getByRole('heading', { name: 'iPad (10th Generation): with' }).click();
